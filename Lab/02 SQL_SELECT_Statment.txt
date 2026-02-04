@@ -1,0 +1,86 @@
+01     Select All 
+==============
+
+SELECT *
+FROM tblCustomers;
+
+
+02       Select Specific fields from table
+===========================
+
+SELECT CustomerID, CompanyName, Zip, State
+FROM tblCustomers;
+
+
+
+03	 Select using conditions 1
+========================
+
+SELECT CustomerID, CompanyName, Zip, State
+FROM tblCustomers
+WHERE State = "CA";
+
+
+
+
+04	 Select using conditions 2
+==========================
+
+SELECT ProductID, ProductName, Price
+FROM tblProducts
+WHERE price > 2;
+
+
+
+
+05	 Select using AND
+=================
+
+
+SELECT ProductID, ProductName, Price
+FROM tblProducts
+WHERE Price >= 2 and Price  <=  5;
+
+
+06	 Select using Between
+====================
+
+SELECT ProductID, ProductName, Price
+FROM tblProducts
+WHERE Price Between 2 and 5;
+
+
+
+
+
+
+
+07	 Select using OR
+==================
+
+
+SELECT CustomerID, CompanyName, Zip, State
+FROM tblCustomers
+WHERE State ="CA" or State = "OR";
+
+
+
+08	 Inner Join 1
+===============
+
+SELECT tblProducts.ProductName, tblProducts.Price, tblCategories.Category
+FROM tblCategories INNER JOIN tblProducts ON tblCategories.CategoryID = tblProducts.CategoryID;
+
+
+
+09	 Inner Join 2
+====================
+
+SELECT tblCustomers.CompanyName, tblOrders.OrderID, tblOrders.OrderDate
+FROM tblCustomers INNER JOIN tblOrders ON tblCustomers.CustomerID = tblOrders.CustomerID;
+
+10       Left Outer Join
+======================
+
+SELECT tblCustomers.CompanyName, tblOrders.OrderID, tblOrders.OrderDate
+FROM tblCustomers LEFT JOIN tblOrders ON tblCustomers.CustomerID = tblOrders.CustomerID;

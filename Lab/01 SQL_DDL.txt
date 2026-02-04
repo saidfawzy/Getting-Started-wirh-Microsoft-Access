@@ -1,0 +1,35 @@
+CREATE Student Table:
+========================
+
+
+CREATE TABLE Students
+          (ID NUMBER PRIMARY KEY , 
+                FName  CHAR(50)  NOT NULL ,
+                LName CHAR(50) ,
+                Address CHAR(50) ,
+               CITY CHAR(50) ,
+               Country CHAR(25) ,
+               Birth_Date DATE) ;
+
+----------------------------------------------------------------------
+
+
+ALTER Command add column
+========================
+
+Alter table students add postal_code number
+
+
+-------------------------------------------------------------------
+
+ALTER Command Drop column
+==========================
+Alter table students drop  column country
+
+
+----------------------------------------------------------
+
+DROP TABLE COMMAND
+==================
+
+DROP TABLE Students
